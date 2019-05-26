@@ -3,7 +3,7 @@ set -eu
 
 https_get() {
     host=${1}; path=${2}
-    printf "GET %s HTTP/1.0\r\n\r\n" "${path}" | gnutls-cli --port=https "${host}"
+    printf "GET %s HTTP/1.0\r\n\r\n" "${path}" | gnutls-cli "${host}"
 }
 
 https_get "httpbin.org" "/get"

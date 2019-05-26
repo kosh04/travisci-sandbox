@@ -8,4 +8,5 @@ addons:
 
 script:
   - gnutls-cli -v
+  - gnutls-cli --help
   - bash gnutls-cli-test.sh
