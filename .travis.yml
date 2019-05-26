@@ -1,4 +1,11 @@
 language: generic
 
+addons:
+  apt:
+    packages:
+      - gnutls-bin
+      - ca-certificates
+
 script:
+  - gnutls-cli -v
   - bash gnutls-cli-test.sh
